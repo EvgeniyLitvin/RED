@@ -8,7 +8,7 @@
 <br>
 
 <h3><p>loadPage</p></h3>
-<p>Return URL of page content according current position.</p>
+<p>Load page content according current position. Requare variable $red, exsample: $red->nav->loadPage($red). </p>
 <br>
 
 <h3><p>id</p></h3>
@@ -16,7 +16,7 @@
 <br>
 
 <h3><p>loadPart</p></h3>
-<p>Return URL of file from /resourses/parts/. Requare name of file, exsample: $red->nav->loadPart('menu'). </p>
+<p>Return URL of file from /resourses/parts/. Requare name of file and variable $red, exsample: $red->nav->loadPart('menu', $red). </p>
 <br>
 
 <h3><p>redirect</p></h3>

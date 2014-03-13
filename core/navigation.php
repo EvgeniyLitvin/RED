@@ -15,16 +15,16 @@
 			return ($this->path);
 			}
 			
-		function loadPage(){
-				return ('resourses/pages/'.$this->page.'.php');
+		function loadPage($red){
+				include('resourses/pages/'.$this->page.'.php');
 			}
 			
 		function id(){
 			return ($this->id);
 			}
 			
-		function loadPart($part){
-			return "resourses/parts/".$part.".php";
+		function loadPart($part, $red){
+			include "resourses/parts/".$part.".php";
 			}
 			
 		function redirect($direction){

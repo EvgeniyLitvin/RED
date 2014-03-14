@@ -1,4 +1,5 @@
 <?php
-$routing['start']='index';
+$routing['start']['category']='main';
+$routing['start']['page']='index';
 $routing['layout']='layout';
 ?>

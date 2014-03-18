@@ -1,5 +1,7 @@
 <?php
-class HTML{
+class HTML extends RED{
+
+	public $form;
 
 	function title($t=NULL){
 		$title=array_filter(explode('/',$_SERVER["PHP_SELF"]));
@@ -54,7 +56,11 @@ class HTML{
 		$post=array();
 		foreach($_POST as $key=>$value)	$post[$key]=htmlspecialchars($value);
 		print "</form>";
-		return $post;
+		$this->form=$post;
+		}
+	
+	function data($name){
+		return $this->form[$name];
 		}
 	
 	}

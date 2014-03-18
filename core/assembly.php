@@ -11,6 +11,7 @@ global $red;
 $red->nav=new navigation;
 $red->sql=new MySQL;
 $red->html=new HTML;
+$red->ctr=new controller;
 
 //set models
 $mode=scandir("resourses/models");

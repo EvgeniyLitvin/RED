@@ -1,5 +1,5 @@
 <?php
-	class navigation{
+	class navigation extends RED{
 		
 		public $path;
 		public $id;
@@ -18,7 +18,19 @@
 			}
 			
 		function loadPage($red){
-				include('resourses/pages/'.$this->category.'/'.$this->page.'.php');
+				require('resourses/controllers/c_'.$this->category.'.php');
+				$ctr="c_".$this->category;
+				$func=$this->page;
+				$red->$ctr= new $ctr;
+				$red->$ctr->$func($red);
+				$mem=$red->$ctr->get();
+				if(isset($mem))
+					while (current($mem)) {
+						$nm=key($mem);
+						$$nm=$mem[key($mem)];
+						next($mem);
+						}
+				include('resourses/views/'.$this->category.'/'.$this->page.'.php');
 			}
 			
 		function id(){
